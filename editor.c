@@ -711,7 +711,7 @@ fputc(screen->format->palette->colors[i].r,fp);
 fputc(screen->format->palette->colors[i].g,fp);
 fputc(screen->format->palette->colors[i].b,fp);
 #endif
-#ifdef WIN32
+#ifdef PC
 fputc(ipal[i][0],fp);
 fputc(ipal[i][1],fp);
 fputc(ipal[i][2],fp);
@@ -771,7 +771,7 @@ s_drawtext(230,84,13);
 l_textstring=sprintf(s_textstring,"B: %i",screen->format->palette->colors[color].b);
 s_drawtext(230,96,13);
 #endif
-#ifdef WIN32
+#ifdef PC
 l_textstring=sprintf(s_textstring,"R: %i",ipal[color][0]);
 s_drawtext(230,72,13);
 l_textstring=sprintf(s_textstring,"G: %i",ipal[color][1]);
@@ -877,7 +877,7 @@ case 5:
      break;
 case 6:l_textstring=sprintf(s_textstring,"AI table managment");break;
 case 7:l_textstring=sprintf(s_textstring,"Begin testing :)");break;
-#ifdef WIN32
+#ifdef PC
 case 8:l_textstring=sprintf(s_textstring,"Return to WINDOWS (actualy you are inside already!)");break;
 #endif
 #ifdef GP2X
@@ -2940,7 +2940,7 @@ switch (animationmode)
        }      
       #endif
 
-      #ifdef WIN32
+      #ifdef PC
       if (controlpad.button[PAD_X])
       {
       colorbuf[0]=ipal[color][0];

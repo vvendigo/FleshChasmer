@@ -34,7 +34,7 @@ void ControlPadUpdate(void)
  controlpad.button[PAD_SELECT]=SDL_JoystickGetButton(joy,VK_SELECT);
 
  controlpad.angle=-1;
-#ifdef WIN32
+#ifdef PC
 Sint16 axis=SDL_JoystickGetAxis(joy,0);
 Uint8 x=1;
 if (axis<-AXIS_DEADZONE) x=0;

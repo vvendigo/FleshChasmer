@@ -11,8 +11,8 @@ LIBS =  -L"d:/games/gp2xSDK/lib" -lmingw32 -liconv -lgp2x -mwindows -lSDL_image 
 INCS =  -I"d:/games/gp2xSDK/include/GP2X"  -I"d:/games/gp2xSDK/include/SDL"  -I"d:/games/gp2xSDK/include"  -I"D:/Proect/GP2X/project1" 
 CXXINCS =  -I"d:/games/gp2xSDK/include/GP2X"  -I"d:/games/gp2xSDK/include/SDL"  -I"d:/games/gp2xSDK/lib/gcc/mingw32/3.4.2/include"  -I"d:/games/gp2xSDK/include/c++/3.4.2/backward"  -I"d:/games/gp2xSDK/include/c++/3.4.2/mingw32"  -I"d:/games/gp2xSDK/include/c++/3.4.2"  -I"d:/games/gp2xSDK/include"  -I"D:/Proect/GP2X/project1" 
 BIN  = FleshChasmer.exe
-CXXFLAGS = $(CXXINCS)   -DWIN32 -fexpensive-optimizations -O3
-CFLAGS = $(INCS) -D_REENTRANT   -DWIN32 -fexpensive-optimizations -O3
+CXXFLAGS = $(CXXINCS)   -DPC -fexpensive-optimizations -O3
+CFLAGS = $(INCS) -D_REENTRANT   -DPC -fexpensive-optimizations -O3
 RM = rm -f
 MKDIR = cygwin-mkdir -p
 

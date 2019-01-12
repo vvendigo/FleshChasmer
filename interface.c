@@ -1448,7 +1448,7 @@ scrbuf[n+323]=36;
 }
 
 scrbuf_draw();
-#ifdef WIN32
+#ifdef PC
 SDL_Delay(5);
 #endif
 }

@@ -38,7 +38,7 @@ void gameloop(void)
        }
        else RenderFade();
 
-#ifdef WIN32
+#ifdef PC
 SDL_Delay(55);
 #endif
 #ifdef GP2X

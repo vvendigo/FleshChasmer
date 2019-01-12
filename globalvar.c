@@ -5,7 +5,7 @@
 Uint16 Model_Faces;
 Uint16 Textured_Faces;
 //DELETE ME
-#ifdef WIN32
+#ifdef PC
 Uint8 ipal[256][3];
 #endif
 
@@ -20,7 +20,7 @@ int audio_rate = 8000;
 Uint16 audio_format = AUDIO_U8; 
 int audio_buffers = 256;
 #endif 
-#ifdef WIN32
+#ifdef PC
 Uint16 audio_format = AUDIO_S16; 
 int audio_buffers = 512;
 #endif 

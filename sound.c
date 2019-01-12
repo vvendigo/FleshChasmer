@@ -1,7 +1,7 @@
 #include "sound.h"
-#include "SDL_Mixer.h"
+#include "SDL_mixer.h"
 #include "globalvar.h"
-#include "GPU.h"
+#include "gpu.h"
 #include "zmath.h"
 Uint8 s_channel=1;Uint8 lastmusicvolume;
 
@@ -38,7 +38,7 @@ Mix_PlayChannel(s_channel,d_sound[index],0);
 #ifdef GP2X
 Mix_SetPanning(s_channel,right,left);
 #endif
-#ifdef WIN32
+#ifdef PC
 Mix_SetPanning(s_channel,left,right);
 #endif
 //}

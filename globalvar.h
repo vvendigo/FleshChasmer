@@ -11,7 +11,7 @@ extern Uint16 Textured_Faces;
 //DELETE ME
 
 
-#ifdef WIN32
+#ifdef PC
 extern Uint8 ipal[256][3];
 #endif
 

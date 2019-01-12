@@ -74,7 +74,7 @@ palfade2[i]=i/8*8+i%8/4;
 fclose(fp);     
 SDL_SetColors(screen,screen->format->palette->colors,0,256);
 #endif
-#ifdef WIN32
+#ifdef PC
 FILE *fp;char c;Uint8 i=0,n=0;
 fp=fopen("data/palette.ggg","rb");
 Uint8 t;

@@ -10,7 +10,7 @@
 #include <monsters.h>
 #include <fields.h>
 #include <sound.h>
-#include <rpg.h>
+#include <RPG.h>
 
 Uint8 trig_status[16];
 Uint8 trig_c[16];

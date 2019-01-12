@@ -7,7 +7,7 @@
 #include "items.h"
 #include "video.h"
 #include "interface.h"
-#include "Player.h"
+#include "player.h"
 #include "skills.h"
 #include "sound.h"
 #include "zmath.h"

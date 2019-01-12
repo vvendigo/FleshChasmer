@@ -211,7 +211,7 @@ Uint8 *p = (Uint8 *)screen->pixels +i;
 *(Uint8 *)p =scrbuf[i];
 }
 #endif
-#ifdef WIN32
+#ifdef PC
 Uint16 x1,y1;
 for (int x=0;x<640;x++)
 for (int y=0;y<480;y++)

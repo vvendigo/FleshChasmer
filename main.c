@@ -91,7 +91,7 @@ if(Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers)) {
   }
 Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
 
-#ifdef WIN32
+#ifdef PC
 SDL_WM_SetCaption("FleshChasmer","");
 	screen = SDL_SetVideoMode (640, 480, 32, SDL_HWSURFACE | SDL_FULLSCREEN);
 	if (screen == NULL) {

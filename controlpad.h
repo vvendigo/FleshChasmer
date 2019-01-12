@@ -41,7 +41,7 @@ enum USBMAP_KEY
 	USBVK_FZ          // 10
 };
 #endif
-#ifdef WIN32// WIN button mapping
+#ifdef PC// WIN button mapping
 enum MAP_KEY
 {
 	VK_FA         , // 0
