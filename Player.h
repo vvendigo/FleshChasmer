@@ -1,0 +1,11 @@
+extern void InitPlayerStatus(void);
+extern void LoadPlayerStatus(void);
+extern void SavePlayerStatus(void);
+extern void TryLevelUp(void);
+extern void GiveExp(unsigned int exppoints);
+extern void NextLevel(void);
+extern void UpdatePlayer(void);
+extern void FullRevive(void);
+extern void AddLevel(void);
+extern void damage_missleweapon(void);
+extern void damage_meleeweapon(void);

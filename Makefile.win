@@ -1,0 +1,115 @@
+# Project: FleshChasmerOne
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = win/main.o win/controlpad.o win/globalvar.o win/gameloop.o win/render.o win/gameproc.o win/gpu.o win/sound.o win/sfont.o win/initall.o win/editor.o win/camera.o win/zmath.o win/game.o win/monsters.o win/ai.o win/fields.o win/items.o win/player.o win/skills.o win/interface.o win/triggers.o win/RPG.o win/video.o win/zdialogs.o win/flood.o win/shop.o win/sectoreffect.o $(RES)
+LINKOBJ  = win/main.o win/controlpad.o win/globalvar.o win/gameloop.o win/render.o win/gameproc.o win/gpu.o win/sound.o win/sfont.o win/initall.o win/editor.o win/camera.o win/zmath.o win/game.o win/monsters.o win/ai.o win/fields.o win/items.o win/player.o win/skills.o win/interface.o win/triggers.o win/RPG.o win/video.o win/zdialogs.o win/flood.o win/shop.o win/sectoreffect.o $(RES)
+LIBS =  -L"d:/games/gp2xSDK/lib" -lmingw32 -liconv -lgp2x -mwindows -lSDL_image -lSDL_mixer -lSDL_ttf -lSDL_inifile -lSDLmain -lSDL -lpng -ljpeg -lvorbisidec -lmad -lfreetype -lz -lunicodefont   
+INCS =  -I"d:/games/gp2xSDK/include/GP2X"  -I"d:/games/gp2xSDK/include/SDL"  -I"d:/games/gp2xSDK/include"  -I"D:/Proect/GP2X/project1" 
+CXXINCS =  -I"d:/games/gp2xSDK/include/GP2X"  -I"d:/games/gp2xSDK/include/SDL"  -I"d:/games/gp2xSDK/lib/gcc/mingw32/3.4.2/include"  -I"d:/games/gp2xSDK/include/c++/3.4.2/backward"  -I"d:/games/gp2xSDK/include/c++/3.4.2/mingw32"  -I"d:/games/gp2xSDK/include/c++/3.4.2"  -I"d:/games/gp2xSDK/include"  -I"D:/Proect/GP2X/project1" 
+BIN  = FleshChasmer.exe
+CXXFLAGS = $(CXXINCS)   -DWIN32 -fexpensive-optimizations -O3
+CFLAGS = $(INCS) -D_REENTRANT   -DWIN32 -fexpensive-optimizations -O3
+RM = rm -f
+MKDIR = cygwin-mkdir -p
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before FleshChasmer.exe all-after
+
+all-before:
+	$(MKDIR) "win"
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $@ $(LIBS)
+
+win/main.o: main.c
+	$(CPP) -c main.c -o win/main.o $(CXXFLAGS)
+
+win/controlpad.o: controlpad.c
+	$(CPP) -c controlpad.c -o win/controlpad.o $(CXXFLAGS)
+
+win/globalvar.o: globalvar.c
+	$(CPP) -c globalvar.c -o win/globalvar.o $(CXXFLAGS)
+
+win/gameloop.o: gameloop.c
+	$(CPP) -c gameloop.c -o win/gameloop.o $(CXXFLAGS)
+
+win/render.o: render.c
+	$(CPP) -c render.c -o win/render.o $(CXXFLAGS)
+
+win/gameproc.o: gameproc.c
+	$(CPP) -c gameproc.c -o win/gameproc.o $(CXXFLAGS)
+
+win/gpu.o: gpu.c
+	$(CPP) -c gpu.c -o win/gpu.o $(CXXFLAGS)
+
+win/sound.o: sound.c
+	$(CPP) -c sound.c -o win/sound.o $(CXXFLAGS)
+
+win/sfont.o: sfont.c
+	$(CPP) -c sfont.c -o win/sfont.o $(CXXFLAGS)
+
+win/initall.o: initall.c
+	$(CPP) -c initall.c -o win/initall.o $(CXXFLAGS)
+
+win/editor.o: editor.c
+	$(CPP) -c editor.c -o win/editor.o $(CXXFLAGS)
+
+win/camera.o: camera.c
+	$(CPP) -c camera.c -o win/camera.o $(CXXFLAGS)
+
+win/zmath.o: zmath.c
+	$(CPP) -c zmath.c -o win/zmath.o $(CXXFLAGS)
+
+win/game.o: game.c
+	$(CPP) -c game.c -o win/game.o $(CXXFLAGS)
+
+win/monsters.o: monsters.c
+	$(CPP) -c monsters.c -o win/monsters.o $(CXXFLAGS)
+
+win/ai.o: ai.c
+	$(CPP) -c ai.c -o win/ai.o $(CXXFLAGS)
+
+win/fields.o: fields.c
+	$(CPP) -c fields.c -o win/fields.o $(CXXFLAGS)
+
+win/items.o: items.c
+	$(CPP) -c items.c -o win/items.o $(CXXFLAGS)
+
+win/player.o: player.c
+	$(CPP) -c player.c -o win/player.o $(CXXFLAGS)
+
+win/skills.o: skills.c
+	$(CPP) -c skills.c -o win/skills.o $(CXXFLAGS)
+
+win/interface.o: interface.c
+	$(CPP) -c interface.c -o win/interface.o $(CXXFLAGS)
+
+win/triggers.o: triggers.c
+	$(CPP) -c triggers.c -o win/triggers.o $(CXXFLAGS)
+
+win/RPG.o: RPG.c
+	$(CPP) -c RPG.c -o win/RPG.o $(CXXFLAGS)
+
+win/video.o: video.c
+	$(CPP) -c video.c -o win/video.o $(CXXFLAGS)
+
+win/zdialogs.o: zdialogs.c
+	$(CPP) -c zdialogs.c -o win/zdialogs.o $(CXXFLAGS)
+
+win/flood.o: flood.c
+	$(CPP) -c flood.c -o win/flood.o $(CXXFLAGS)
+
+win/shop.o: shop.c
+	$(CPP) -c shop.c -o win/shop.o $(CXXFLAGS)
+
+win/sectoreffect.o: sectoreffect.c
+	$(CPP) -c sectoreffect.c -o win/sectoreffect.o $(CXXFLAGS)

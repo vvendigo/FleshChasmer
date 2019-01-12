@@ -1,0 +1,29 @@
+|=-------------==-----------==---------------=|
+| PC Keyboard  | PC GamePad  |  GP2X          | 
+|=-------------==-----------==---------------=|
+|      W       |   Axis Y-   | Joy Up         |
+|      E       |    Y- x+    | Joy Up-Right   |
+|      D       |     x+      | Joy Right      |
+|      C       |    Y+ x+    | Joy Down-Right |
+|      X       |     Y+      | Joy Down       |
+|      Z       |    Y+ x-    | Joy Down-Left  |
+|      A       |     x-      | Joy Left       |
+|      Q       |    Y- x-    | Joy Up-Left    |
+|--------------=-------------=----------------|
+|      F       |   Button 0  |  Button A      |
+|      G       |   Button 1  |  Button X      |
+|      H       |   Button 2  |  Button B      |
+|      T       |   Button 3  |  Button Y      |
+|--------------=-------------=----------------|
+|      R       |   Button 4  |  Button L      |
+|      Y       |   Button 5  |  Button R      |
+|--------------=-------------=----------------|
+|      4       |   Button 6  |  Button Vol-   |
+|      5       |   Button 7  |  Button Vol+   |
+|--------------=-------------=----------------|
+|      B       |   Button 8  |  Button SELECT |
+|      N       |   Button 9  |  Button START  |
+|--------------=-------------=----------------|
+|      S       |   Button 10 |  Button Z      |
+ --------------=-------------=----------------
+      For Usage with FleshChasmer PC Port Only

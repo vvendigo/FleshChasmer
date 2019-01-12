@@ -1,0 +1,113 @@
+# Project: FleshChasmerOne
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+OBJ  = gp2x/main.o gp2x/controlpad.o gp2x/globalvar.o gp2x/gameloop.o gp2x/render.o gp2x/gameproc.o gp2x/gpu.o gp2x/sound.o gp2x/sfont.o gp2x/initall.o gp2x/editor.o gp2x/camera.o gp2x/zmath.o gp2x/game.o gp2x/monsters.o gp2x/ai.o gp2x/fields.o gp2x/items.o gp2x/player.o gp2x/skills.o gp2x/interface.o gp2x/triggers.o gp2x/RPG.o gp2x/video.o gp2x/zdialogs.o gp2x/flood.o gp2x/shop.o gp2x/sectoreffect.o
+LINKOBJ  = gp2x/main.o gp2x/controlpad.o gp2x/globalvar.o gp2x/gameloop.o gp2x/render.o gp2x/gameproc.o gp2x/gpu.o gp2x/sound.o gp2x/sfont.o gp2x/initall.o gp2x/editor.o gp2x/camera.o gp2x/zmath.o gp2x/game.o gp2x/monsters.o gp2x/ai.o gp2x/fields.o gp2x/items.o gp2x/player.o gp2x/skills.o gp2x/interface.o gp2x/triggers.o gp2x/RPG.o gp2x/video.o gp2x/zdialogs.o gp2x/flood.o gp2x/shop.o gp2x/sectoreffect.o
+LIBS =  -L"d:/games/gp2xSDK/Tools/arm-gp2x-linux/lib" -mwindows -lSDL_image -lSDL_mixer -lSDL_ttf -lSDL_inifile -lSDL -lpng -ljpeg -lvorbisidec -lmad -lfreetype -lz -lunicodefont  -s  
+INCS =  -I"d:/games/gp2xSDK/Tools/arm-gp2x-linux/include"  -I"d:/games/gp2xSDK/Tools/include"  -I"d:/games/gp2xSDK/Tools/include/SDL"  -I"D:/Proect/GP2X/project1" 
+CXXINCS =  -I"d:/games/gp2xSDK/Tools/include/c++/3.4.6/backward"  -I"d:/games/gp2xSDK/Tools/include/c++/3.4.6"  -I"d:/games/gp2xSDK/Tools/arm-gp2x-linux/include"  -I"d:/games/gp2xSDK/Tools/include"  -I"d:/games/gp2xSDK/Tools/include/SDL"  -I"D:/Proect/GP2X/project1" 
+BIN  = FleshChasmer.gpe
+CXXFLAGS = $(CXXINCS)   -DGP2X -fexpensive-optimizations -O3
+CFLAGS = $(INCS) -D_REENTRANT   -DGP2X -fexpensive-optimizations -O3
+RM = rm -f
+MKDIR = cygwin-mkdir -p
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before FleshChasmer.gpe all-after
+
+all-before:
+	$(MKDIR) "gp2x"
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $@ $(LIBS)
+
+gp2x/main.o: main.c
+	$(CPP) -c main.c -o gp2x/main.o $(CXXFLAGS)
+
+gp2x/controlpad.o: controlpad.c
+	$(CPP) -c controlpad.c -o gp2x/controlpad.o $(CXXFLAGS)
+
+gp2x/globalvar.o: globalvar.c
+	$(CPP) -c globalvar.c -o gp2x/globalvar.o $(CXXFLAGS)
+
+gp2x/gameloop.o: gameloop.c
+	$(CPP) -c gameloop.c -o gp2x/gameloop.o $(CXXFLAGS)
+
+gp2x/render.o: render.c
+	$(CPP) -c render.c -o gp2x/render.o $(CXXFLAGS)
+
+gp2x/gameproc.o: gameproc.c
+	$(CPP) -c gameproc.c -o gp2x/gameproc.o $(CXXFLAGS)
+
+gp2x/gpu.o: gpu.c
+	$(CPP) -c gpu.c -o gp2x/gpu.o $(CXXFLAGS)
+
+gp2x/sound.o: sound.c
+	$(CPP) -c sound.c -o gp2x/sound.o $(CXXFLAGS)
+
+gp2x/sfont.o: sfont.c
+	$(CPP) -c sfont.c -o gp2x/sfont.o $(CXXFLAGS)
+
+gp2x/initall.o: initall.c
+	$(CPP) -c initall.c -o gp2x/initall.o $(CXXFLAGS)
+
+gp2x/editor.o: editor.c
+	$(CPP) -c editor.c -o gp2x/editor.o $(CXXFLAGS)
+
+gp2x/camera.o: camera.c
+	$(CPP) -c camera.c -o gp2x/camera.o $(CXXFLAGS)
+
+gp2x/zmath.o: zmath.c
+	$(CPP) -c zmath.c -o gp2x/zmath.o $(CXXFLAGS)
+
+gp2x/game.o: game.c
+	$(CPP) -c game.c -o gp2x/game.o $(CXXFLAGS)
+
+gp2x/monsters.o: monsters.c
+	$(CPP) -c monsters.c -o gp2x/monsters.o $(CXXFLAGS)
+
+gp2x/ai.o: ai.c
+	$(CPP) -c ai.c -o gp2x/ai.o $(CXXFLAGS)
+
+gp2x/fields.o: fields.c
+	$(CPP) -c fields.c -o gp2x/fields.o $(CXXFLAGS)
+
+gp2x/items.o: items.c
+	$(CPP) -c items.c -o gp2x/items.o $(CXXFLAGS)
+
+gp2x/player.o: player.c
+	$(CPP) -c player.c -o gp2x/player.o $(CXXFLAGS)
+
+gp2x/skills.o: skills.c
+	$(CPP) -c skills.c -o gp2x/skills.o $(CXXFLAGS)
+
+gp2x/interface.o: interface.c
+	$(CPP) -c interface.c -o gp2x/interface.o $(CXXFLAGS)
+
+gp2x/triggers.o: triggers.c
+	$(CPP) -c triggers.c -o gp2x/triggers.o $(CXXFLAGS)
+
+gp2x/RPG.o: RPG.c
+	$(CPP) -c RPG.c -o gp2x/RPG.o $(CXXFLAGS)
+
+gp2x/video.o: video.c
+	$(CPP) -c video.c -o gp2x/video.o $(CXXFLAGS)
+
+gp2x/zdialogs.o: zdialogs.c
+	$(CPP) -c zdialogs.c -o gp2x/zdialogs.o $(CXXFLAGS)
+
+gp2x/flood.o: flood.c
+	$(CPP) -c flood.c -o gp2x/flood.o $(CXXFLAGS)
+
+gp2x/shop.o: shop.c
+	$(CPP) -c shop.c -o gp2x/shop.o $(CXXFLAGS)
+
+gp2x/sectoreffect.o: sectoreffect.c
+	$(CPP) -c sectoreffect.c -o gp2x/sectoreffect.o $(CXXFLAGS)
