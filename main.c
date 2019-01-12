@@ -75,6 +75,22 @@ close(gp2x_dev);
 
 int main (int argc, char *argv[])
 {
+#ifdef PC
+fullscreen = false;
+#endif
+
+for (int i=1; i < argc; ++i) {
+	if (!strcmp("--fullscreen", argv[i])) {
+		fullscreen = true;
+	} else
+	if (!strcmp("--editor", argv[i])) {
+		EditorOn = 1;
+	} else {
+		printf("%s [--fullscreen] [--editor]\n", argv[0]);
+		return strcmp("--help", argv[i]);
+	}
+}
+
 #ifdef GP2X
 RamHack();
 //system("/sbin/insmod mmuhack.o");
@@ -93,7 +109,7 @@ Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
 
 #ifdef PC
 SDL_WM_SetCaption("FleshChasmer","");
-	screen = SDL_SetVideoMode (640, 480, 32, SDL_HWSURFACE | SDL_FULLSCREEN);
+	screen = SDL_SetVideoMode (640, 480, 32, SDL_HWSURFACE | (fullscreen ? SDL_FULLSCREEN : 0));
 	if (screen == NULL) {
 		exit (2);
 	}
@@ -108,14 +124,13 @@ SDL_WM_SetCaption("FleshChasmer","");
 //load all
 LoadConfig();
 InitAll();
-if (argv[1]!=NULL)
+if (EditorOn)
 {
 GameMode=EDITOR_MENU;//enchance this
 NewGameMode=EDITOR_MENU;//enchance this
 }                
 else
 {
-EditorOn=0;
 NewGameMode=LOADING_GAME;//enchance this
 GameMode=LOADING_GAME;
 }

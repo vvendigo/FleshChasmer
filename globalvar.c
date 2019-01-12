@@ -9,6 +9,7 @@ Uint16 Textured_Faces;
 Uint8 ipal[256][3];
 #endif
 
+bool fullscreen = true;
 
 SDL_Surface *screen;
 
@@ -47,7 +48,7 @@ Uint8 CameraMode;
 Sint32 customcamera[6];
 
 
-Uint8 GameLoopEnabled=1,EditorOn=1;
+Uint8 GameLoopEnabled=1,EditorOn=0;
 Uint8 GameMode=LOADING_EDITOR,NewGameMode;
 Sint8 menupos=0;
 Sint32 debugval0,debugval1;

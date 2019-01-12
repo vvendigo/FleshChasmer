@@ -10,6 +10,7 @@ extern Uint16 Model_Faces;
 extern Uint16 Textured_Faces;
 //DELETE ME
 
+extern bool fullscreen;
 
 #ifdef PC
 extern Uint8 ipal[256][3];
