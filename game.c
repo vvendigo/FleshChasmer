@@ -1257,6 +1257,7 @@ Music_Volume=40;
   case 0:l_textstring=sprintf(s_textstring,"Classic");break;      
   case 1:l_textstring=sprintf(s_textstring,"Custom 1");break;      
   case 2:l_textstring=sprintf(s_textstring,"Custom 2");break;      
+  case 3:l_textstring=sprintf(s_textstring,"Own Eyes");break;      
   }              
   s_drawtext2(141,109,83);               
   s_drawtext2(140,108,85);               
@@ -1464,7 +1465,7 @@ if (count%2)
              {
       case 0:SoundMode=(SoundMode+1)%3;sPlaySound(0,128,128);break;              
       case 1:ControlMode=(ControlMode+1)%2;sPlaySound(0,128,128);break;              
-      case 2:CameraMode=(CameraMode+1)%3;sPlaySound(0,128,128);break;              
+      case 2:CameraMode=(CameraMode+1)%4;sPlaySound(0,128,128);break;              
       case 3:MonsterHpMode=(MonsterHpMode+1)%2;sPlaySound(0,128,128);break;              
       case 4:showmap=(showmap+1)%2;sPlaySound(0,128,128);break;              
              }
@@ -1475,7 +1476,7 @@ if (count%2)
              {
       case 0:if (SoundMode) SoundMode--; else SoundMode=2;sPlaySound(0,128,128);break;              
       case 1:ControlMode=(ControlMode+1)%2;sPlaySound(0,128,128);break;              
-      case 2:if (CameraMode) CameraMode=(CameraMode-1); else CameraMode=2;sPlaySound(0,128,128);break;              
+      case 2:if (CameraMode) CameraMode=(CameraMode-1); else CameraMode=3;sPlaySound(0,128,128);break;              
       case 3:MonsterHpMode=(MonsterHpMode+1)%2;sPlaySound(0,128,128);break;              
       case 4:showmap=(showmap+1)%2;sPlaySound(0,128,128);break;              
              }
@@ -1489,7 +1490,7 @@ if ((controlpad.button[PAD_A])|(controlpad.button[PAD_B])|(controlpad.button[PAD
       case 0:SoundMode=(SoundMode+1)%3;sPlaySound(0,128,128);break;              
 
       case 1:ControlMode=(ControlMode+1)%2;sPlaySound(0,128,128);break;              
-      case 2:CameraMode=(CameraMode+1)%3;sPlaySound(0,128,128);break;              
+      case 2:CameraMode=(CameraMode+1)%4;sPlaySound(0,128,128);break;              
       case 3:MonsterHpMode=(MonsterHpMode+1)%2;sPlaySound(0,128,128);break;              
       case 4:showmap=(showmap+1)%2;sPlaySound(0,128,128);break;              
 

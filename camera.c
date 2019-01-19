@@ -112,6 +112,16 @@ return i;
 
 void procplayercamera(void)
 {
+if (CameraMode == 3) {
+Sint32 a=SuperAngle(-monster_angle[0]+1024);
+camera[0]=monster_x[0];//-f_cos[monster_angle[0]];
+camera[1]=monster_z[0]+65536-17800;
+camera[2]=monster_y[0];//-f_sin[monster_angle[0]];
+camera[3]=4096-86;
+camera[4]=a;
+camera[5]=0;
+camsync();
+} else
 if (CameraMode)
 {
 Sint32 a=SuperAngle(-monster_angle[0]+1024);
